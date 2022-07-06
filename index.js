@@ -1,14 +1,27 @@
-function hasTargetSum(array, target) {
-  // Write your algorithm here
+const myArray = [3, 8, 12, 4, 11, 7] 
+const myTarget = 10
+  
+  function hasTargetSum(array, target) {
+
+  for (let i = 0; i < array.length; i++){
+    const firstNumber = target - array[i]
+    for (let j = i + 1; j < array.length; j++){
+      if (array[j] == firstNumber) return true
+    }
+  }
+  return false
 }
 
 /* 
+
   Write the Big O time complexity of your function here
 */
 
 /* 
   Add your pseudocode here
 */
+// 
+// function should be able to add up to sum using any pair of numbers in array
 
 /*
   Add written explanation of your solution here
